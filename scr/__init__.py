@@ -1,0 +1,5 @@
+__title__ = "twitchemizer"
+__version__ = "0.0.1"
+__license__ = "MIT"
+__author__ = "binakot"
+__copyright__ = "Copyright 2017 binakot"
