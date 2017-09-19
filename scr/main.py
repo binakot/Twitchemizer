@@ -1,9 +1,15 @@
 import thread
 import StreamLinkWatcher
 
-WATCHER_COUNT = 10
+STREAM_URL = 'http://www.twitch.tv/blizzakot'
+WATCHER_COUNT = 5
+PROXY_FILE = '../resources/proxy.txt'
 
-for x in range(0, WATCHER_COUNT):
-    thread.start_new_thread(StreamLinkWatcher.watch, ('https://www.twitch.tv/blizzakot',))
+with open(PROXY_FILE) as f:
+    proxies = f.readlines()
+proxies = [x.strip() for x in proxies]
 
-raw_input("Press Enter to quit...")
+for x in range(0, min(WATCHER_COUNT, len(proxies))):
+    thread.start_new_thread(StreamLinkWatcher.watch, (STREAM_URL, proxies[x]))
+
+raw_input('Press Enter to quit...\r\n')
