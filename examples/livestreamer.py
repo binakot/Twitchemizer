@@ -5,7 +5,6 @@ from __future__ import print_function
 import sys
 
 import gi
-
 from gi.repository import GObject as gobject, Gst as gst
 from livestreamer import Livestreamer, StreamError, PluginError, NoPluginError
 

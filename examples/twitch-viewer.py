@@ -14,13 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 '''
 
-import requests
-import subprocess
 import json
-import sys
 import multiprocessing
-import time
 import random
+import subprocess
+import sys
+import time
+
+import requests
 
 channel_url = "twitch.tv/"
 processes = []

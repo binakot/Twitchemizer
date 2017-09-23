@@ -1,4 +1,5 @@
 import thread
+
 import StreamLinkWatcher
 
 STREAM_URL = 'http://www.twitch.tv/blizzakot'
